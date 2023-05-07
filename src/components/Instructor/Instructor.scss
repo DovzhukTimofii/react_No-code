@@ -1,0 +1,45 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.about-instructor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 96px;
+    &__text {
+        width: 560px;
+        .about-instructor__h2 {
+            @include h2;
+            text-align: inherit
+        }
+        .about-instructor__h3 {
+            @include h3;
+            text-align: inherit
+        }
+    }
+    &__photo {
+        width: 43%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 1149px) {
+    .about-instructor {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 1149px) {
+    .about-instructor {
+        &__text {
+            width: auto;
+        }
+        &__photo {
+            width: 66%;
+        }
+    }
+}

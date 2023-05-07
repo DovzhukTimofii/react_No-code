@@ -1,0 +1,87 @@
+@mixin fat-link {
+    color: $main-text-color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    transition: 0.6s;
+  }
+@mixin button {
+    background: $main-background-color;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 33px;
+    border: none;
+}
+@mixin buttonHover {
+    &:hover {
+      background: $quarter-background-color;
+      transition: 0.6s;
+    }
+}
+@mixin p-classic {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $main-text-color;
+}
+@mixin mainLinkText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-text-color;
+}
+@mixin link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: $main-text-color;
+    text-decoration: none;
+    transition: 0.6s;
+}
+@mixin linkHover {
+    &:hover {
+      color: $second-text-color;
+    }
+}
+@mixin h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 56px;
+    color: $main-text-color;
+    text-align: center;
+}
+
+@mixin h3 {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $main-text-color;
+    text-align: center;
+}
+
+@mixin h4 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: $main-text-color;
+}
+
+@mixin description {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-text-color;
+}

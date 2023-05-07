@@ -1,0 +1,84 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.hot-deals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 120px;
+    &__warning {
+        width: 457px;
+        height: 30px;
+        border-radius: 33px;
+        background: $pale-yellow_backround-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 2.57143px;
+            text-transform: uppercase;
+            color: $second-text-color;
+        }
+    }
+    &__h2 {
+        @include h2;
+        max-width: 612px;
+    }
+    &__button {
+        @include button;
+        width: 234px;
+        height: 66px;
+        font-family: 'Mulish';
+        font-size: 20px;
+        line-height: 25px;
+        &:hover {
+            @include buttonHover;
+        }
+    }
+    &__circle {
+        width: 355px;
+        height: 355px;
+        right: -9%;
+        position: absolute;
+        border-radius: 50%;
+        background: $main-background-color;
+        margin-left: -50px;
+        display: flex;
+
+        .hot-deals__mini-circle {
+            width: 123px;
+            height: 123px;
+            border-radius: 50%;
+            background: $third-background-color;  
+        }
+    }
+    
+}
+
+@media (max-width: 1149px) {
+    .hot-deals__circle {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .hot-deals__warning {
+        width: 362px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hot-deals__warning {
+        width: 298px;
+        &-text {
+            letter-spacing: 0.57143px;
+        }
+    }
+}

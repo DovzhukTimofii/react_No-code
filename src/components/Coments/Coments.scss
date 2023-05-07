@@ -1,0 +1,116 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.coments {
+    width: 100%;
+    height: 804px;
+    background: $main-background-color;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    margin-bottom: 120px;
+    &__headline {
+        text-align: center;
+        width: 565px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding-bottom: 120px;
+        .coments__h2 {
+            @include h2;
+            color: $white;
+            line-height: 30px;
+        }
+        .coments__p {
+            @include h3;
+            color: $white;
+        }
+    }
+    &__item {
+        text-align: -webkit-center;
+        &-card {
+            width: 550px;
+            height: 330px;
+            background: rgba(76, 0, 112, 0.195968);
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 40px;
+            .coments__item-text {
+                @include h3;
+                color: $white;
+            }
+        }
+        &-student {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 215px;
+            margin-top: 55px;
+            .coments__item-desc {
+                display: flex;
+                flex-direction: column;
+                text-align: initial;
+                .coments__item-name {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $white;
+                }
+                .coments__item-status {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 645px) {
+    .coments__item-card {
+        width: 461px;
+    }
+    .coments__headline {
+        width: auto;
+        .coments__h2 {
+            line-height: 56px;
+        }
+    }
+}
+
+@media (max-width: 565px) {
+    .coments {
+        padding-top: 26px;
+    }
+    .coments__item-card {
+        width: 301px;
+        height: 400px;
+    }
+    .coments__headline {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .coments {
+        height: 900px;
+    }
+    .coments__item-card {
+        width: 70%;
+        height: auto;
+        padding-top: 1px;
+        padding-bottom: 20px;
+    }
+    .coments__item-student  {
+        margin-top: 30px;
+    }
+}

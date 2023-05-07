@@ -1,0 +1,80 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    &_logo {
+      width: 140px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: $main-text-color;
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    &_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 855px;
+      .header_nav {
+        &-list {
+          display: flex;
+          justify-content: space-between;
+          width: 315px;
+          padding-left: 0;
+          li {
+            list-style-type: none;
+            a {
+              @include fat-link;
+              &:hover {
+                color: $second-text-color;
+              }
+            }
+          }
+        }
+      }
+      .header_registration {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 245px;
+        a {
+          @include fat-link;
+          &:hover {
+            color: $second-text-color;
+          }
+        }
+        button {
+          @include button;
+          font-size: 16px;
+          line-height: 20px;
+          width: 147px;
+          height: 50px;
+          @include buttonHover;
+        }
+      }
+    }
+}
+@media (max-width: 1200px) {
+    .header_content {
+        width: 765px;
+
+    }
+}
+@media (max-width: 992px) {
+    .header_content {
+        width: 554px;
+        .header_nav-list {
+            width: 274px;
+        }
+    }
+}

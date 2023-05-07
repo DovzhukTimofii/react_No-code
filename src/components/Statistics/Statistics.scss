@@ -1,0 +1,99 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    .purple__circle {
+      width: 288px;
+      height: 288px;
+      position: absolute;
+      border-radius: 50%;
+      background: $main-background-color;
+      margin-left: -50px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: end;
+      .small-yellow__circle {
+        background: $third-background-color;
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+      }
+    }
+    .half__circle {
+      border-radius: 100% 0 0 100% / 50% 0 0 50%;
+      background: $third-background-color;
+      width: 192px;
+      height: 384px;
+      position: absolute;
+      align-self: flex-end;
+      margin-top: 14%;
+    }
+    .statistic__table {
+      border: 1px solid $gray-backround-color;
+      background: white;
+      max-width: 1120px;
+      height: 172px;
+      border-radius: 21px;
+      margin-top: -22px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      position: sticky;
+      justify-self: revert;
+      align-self: center;
+      .statistic__table--box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        .statistic__number {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 50px;
+          color: $main-text-color;
+        }
+      }
+      .statistic__stick {
+        width: 2px;
+        height: 100px;
+        background: $gray-backround-color;
+      }
+    }
+
+}
+
+@media (max-width: 743px) {
+  .half__circle {
+    display: none;
+  }
+  .statistics {
+    .purple__circle {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .statistics {
+      .statistic__table {
+          padding-top: 25px;
+          padding-bottom: 25px;
+          flex-direction: column;
+          display: flex;
+          height: 300px;
+          .statistic__stick {
+              width: 100px;
+              height: 2px;
+          }
+      }
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.respons-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 128px;
+    .respons-cards__h2 {
+        @include h2
+    }
+    .respons-card {
+        width: 930px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        padding-left: 43px;
+        padding-right: 40px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #0000002e ;
+        border-radius: 21px;
+        margin-top: 20px;
+        &__text {
+            width: 730px;
+            .respons-card__headline {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                color: $main-text-color;
+            }
+            .respons-card__description {
+                @include description;
+                display: none;
+            }
+            .respons-card__active {
+                display: block;
+            }
+        }
+        &__button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $pale-yellow_backround-color;
+            border: none;
+            transition: 0.5s;
+            transform: rotate(180deg);
+            &-active {
+                transform: rotate(0deg);
+            }
+            &:hover {
+                background: linear-gradient(35.71deg, #ffd7a9a1 9.11%, #ffae7047 71.64%);
+                img {
+                    transform: scale(1.3);
+                    transition: 0.8s;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 1149px) {
+    .respons-cards {
+       .respons-card {
+            flex-direction: column-reverse;
+            width: 80%;
+            align-items: center;
+            &__text {
+                width: auto;
+            }
+            .respons-card__headline {
+                text-align: center;
+            }
+       }
+    }
+}

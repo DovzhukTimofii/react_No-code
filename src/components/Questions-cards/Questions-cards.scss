@@ -1,0 +1,90 @@
+@import '../../Scss/Common.scss';
+@import '../../Scss/Fonts.scss';
+@import '../../Scss/Mixin.scss';
+
+.questions-cards {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+    &__headline {
+        width: 550px;
+        .questions-cards__h2 {
+            @include h2
+        }
+        .questions-cards__h3 {
+            @include h3
+        }
+    }
+    &__items {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        .questions-cards__item {
+            width: 1120px;
+            height: 172px;
+            border-radius: 21px;
+            background: $fifth-backround-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            &-text {
+                display: flex;
+                flex-direction: column;
+                width: 460px;
+                .questions-cards__item-headline {
+                    @include h4;
+                    line-height: 0px;
+                }
+                .questions-cards__item-description {
+                    @include description
+                }
+            }
+            &-services {
+                width: 278px;
+                height: 66px;
+                border-radius: 33px;
+                background: $main-background-color;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .questions-cards__item-stic {
+                    border-left: 1px solid black;
+                    width: 1px;
+                    height: 30px;
+                }
+                .questions-cards__item-description {
+                    @include description;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1149px) {
+    .questions-cards__items {
+        width: 100%;
+        .questions-cards__item {
+            width: 100%;
+            height: 370px;
+            flex-direction: column;
+            &-text {
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .questions-cards__headline {
+        width: auto;
+    }
+    .questions-cards__items {
+        .questions-cards__item {
+            &-text {
+                width: auto;
+            }
+        }
+    }
+}
